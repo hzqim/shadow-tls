@@ -1,9 +1,10 @@
 name: Build Docker Images
 on:
+  workflow_dispatch:
   push:
-    tags:
-      - v*
-
+    branches:
+      - production
+      - production/**
 jobs:
   build:
     runs-on: ubuntu-latest
